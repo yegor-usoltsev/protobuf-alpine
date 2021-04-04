@@ -7,7 +7,7 @@ RUN apk --no-cache add wget \
     && apk add glibc.apk \
     && rm /etc/apk/keys/sgerrand.rsa.pub glibc.apk
 
-ENV PROTOC_VERSION=3.15.6
+ENV PROTOC_VERSION=3.15.7
 RUN wget -q https://github.com/protocolbuffers/protobuf/releases/download/v${PROTOC_VERSION}/protoc-${PROTOC_VERSION}-linux-x86_64.zip -O protoc.zip \
     && unzip protoc.zip -d /usr/local \
     && rm protoc.zip \
